@@ -1,3 +1,5 @@
+##Add filter to the dashboard panel##
+
 <form>
   <label>Cascading Dashboard</label>
   <fieldset submitButton="false">
