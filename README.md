@@ -1,6 +1,6 @@
 # Splunk_SPL
 
-Here I am writing tstats queries:
+***tstats queries:-***
 
 Find list of indexes count
 
@@ -8,7 +8,7 @@ Find list of indexes count
 
 The above query results the list of indexes with record counts in each index
 
-Develop VendorID filter in the dashboard:
+***Develop VendorID filter in the dashboard:***
 
 Here I am building dropdown list for VendorIDs. In order to achieve this I followed below steps
 
@@ -25,7 +25,7 @@ I want to add submit button to this input panel. To achieve that I edited XML co
 
 To hide filter there is an option called Hide Filter, Which will hide filter from the panel.
 
-*** The Filter panel's XML code starts with "Form" whereas the dashboard's (without filter panel) XML code start with "dashboard"***
+***The Filter panel's XML code starts with "Form" whereas the dashboard's (without filter panel) XML code start with "dashboard"***
 
 To interlink filter to the dashboard, add filter_token name in the dashboard search query. Then the dashboard will generate based on filter selections.
 
