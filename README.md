@@ -29,7 +29,7 @@ To hide filter there is an option called Hide Filter, Which will hide filter fro
 
 To interlink filter to the dashboard, add filter_token name in the dashboard search query. Then the dashboard will generate based on filter selections.
 
-Ex: 
+Ex: index=main VendorID=$VendorID_Token$ | stats count by VendorID
 
 
 
