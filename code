@@ -1,0 +1,39 @@
+##Add filter to the dashboard panel##
+
+<form>
+  <label>Cascading Dashboard</label>
+  <fieldset submitButton="false">
+    <input type="dropdown" token="VendorID_Token" searchWhenChanged="true">
+      <label>Select VendorID</label>
+      <search>
+        <query>index=* VendorID=$VendorID_Token$ | stats count by VendorID</query>
+        <earliest>0</earliest>
+        <latest></latest>
+      </search>
+      <choice value="*">All</choice>
+      <fieldForLabel>VendorID</fieldForLabel>
+      <fieldForValue>VendorID</fieldForValue>
+      <default>*</default>
+      <initialValue>*</initialValue>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Vendor_Counts</title>
+      <chart>
+        <search>
+          <query>index = main VendorID=$VendorID_Token$ |stats count by VendorID</query>
+          <earliest>0</earliest>
+          <latest></latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.drilldown">all</option>
+        <option name="refresh.display">progressbar</option>
+        <drilldown>
+          <set token="VendorID_Token">$click.name$</set>
+        </drilldown>
+      </chart>
+    </panel>
+  </row>
+</form>
