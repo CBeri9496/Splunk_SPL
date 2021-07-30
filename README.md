@@ -6,7 +6,7 @@ Find list of indexes count
 
 |tstats count where index=* OR index=_* by index
 
-The above query results the list of indexes with record counts in each index
+The above query return the list of indexes with total records count in each index
 
 ***Develop VendorID filter in the dashboard:***
 
@@ -31,6 +31,31 @@ To interlink filter to the dashboard, add filter_token name in the dashboard sea
 
 Ex: index=main VendorID=$VendorID_Token$ | stats count by VendorID
 
+******SummaryIndex******
+
+Summary index can be helpful to collect existed index data in a new summary index based on schedule search in the background. Summery index is efficient for large vaolume of data. The advantage of summery search is that instead of searching for certain data in a big dataset it will create a small dataset with relevent conditions under summery index. Which gives less time to search/run dashboards and the lattancy would be low. 
+
+Ex: I have a dataset called sales which contains customer, item, vendor, shipping data. My dashboard needs only vendor related information. Instead of searching vendor information in the sales dataset I can create a summary index on vendor data. Which will take less time to run dashboard. 
+
+Create Summary Index:
+1. Go to Settings 
+2. Select Indexes under Data category
+3. Select New Index
+4. Give appropriate index name, in my case I am giving vendor_summary_index as my summary index name
+5. Select Index Data Type whichever is suitable for the analysis, for me i choose event type datatype
+6. Save summary index
+
+Populate Data in Summary Index:
+To populate vendor data in vendor_summary_index, I created a report as populate_vendor_summary. I edited schedule based on the data available in my sample dataset. I have data from 07/20/2021 to 07/27/2021. I want to push data from 07/23/2021 to 07/27/2021 on daily basis. To acheive this I scheduled my report as below
+1. Schedule: Run Everyday At 11:00 AM
+2. Time Range: Custom -7d@d to -6d@d (07/23/2021 12:00 AM to 07/24/2021 12:00 AM)
+3. Schedule Priority: Highest
+4. Schedule Window: 5 Minutes
+5. Trigger Actions:
+   a. Output Result to lookup --> FileName: Vendor_Summary_Index.csv --> Append records after every run
+   b. Send Email
+   
+This report will trigger at 11:00 AM CST. Hopefully my report will populate vendor data in vendor_summary_index. Fingers crossed!!!
 
 
 
