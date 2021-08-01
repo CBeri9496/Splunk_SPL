@@ -57,5 +57,25 @@ To populate vendor data in vendor_summary_index, I created a report as populate_
    
 This report will trigger at 11:00 AM CST. Hopefully my report will populate vendor data in vendor_summary_index. Fingers crossed!!!
 
+On Friday, I didn't see data on vendor_summary_index but I could see that the job ran successfully as below.
+
+<img width="1243" alt="image" src="https://user-images.githubusercontent.com/16859646/127785447-0cfdca0f-b441-4923-a714-09efbf356473.png">
+
+I couldn't to able find why I am not seeing data on summary_index eventhough job ran successfully. After long research I found that I didn't enable summary indexing on the report. Now I enabled summary Indexing as below
+
+1. Report: populate_summary_index
+2. Enable Summary Indexing: check marked as yes
+3. Select Indexing Type: Event
+4. Select the summary index: vendor_summary_index
+
+I am not adding fields now. Tomorrow after data pushed to summary_index I'll add adding fileds option. This approach is to understand the difference between adding fileds and without adding fileds on the summari indexing.
+
+I noticed that the report job is not creating at exactly 11:00AM CST. So I made changes on the report schedule. I removed scheduled window as 'No window'. Hopefully this will help to create/run the job at 11:00AM CST.
+
+
+
+
+
+
 
 
