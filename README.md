@@ -70,7 +70,7 @@ I couldn't to able find why I am not seeing data on summary_index eventhough job
 
 I am not adding fields now. Tomorrow after data pushed to summary_index I'll add adding fileds option. This approach is to understand the difference between adding fileds and without adding fileds on the summari indexing.
 
-I noticed that the report job is not creating at exactly 11:00AM CST. So I made changes on the report schedule. I removed scheduled window as 'No window'. Hopefully this will help to create/run the job at 11:00AM CST.
+And also, I've noticed that the report job is not creating at exactly 11:00AM CST. So I made changes on the report schedule. I removed scheduled window as 'No window'. Hopefully this will help to create/run the job at 11:00AM CST.
 
 
 
