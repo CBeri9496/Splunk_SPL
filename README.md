@@ -68,13 +68,17 @@ I couldn't to able find why I am not seeing data on summary_index eventhough job
 3. Select Indexing Type: Event
 4. Select the summary index: vendor_summary_index
 
-I am not adding fields now. Tomorrow after data pushed to summary_index I'll add adding fileds option. This approach is to understand the difference between adding fileds and without adding fileds on the summari indexing.
+I am not adding fields now. Tomorrow after data pushed to summary_index I'll add adding fileds option. This approach is to understand the difference between adding fileds and without adding fileds on the summary indexing.
 
 And also, I've noticed that the report job is not creating at exactly 11:00AM CST. So I made changes on the report schedule. I removed scheduled window as 'No window'. Hopefully this will help to create/run the job at 11:00AM CST.
 
-Yay!!! summary index report is working fine and selected data pushed to vendor_summary_index and the job ran at 11:00AM CST without any delays. So far vendor_summary_index is carrying 07/26/2021 data.
+Yay!!! summary index report is working fine and selected data pushed to vendor_summary_index and the job ran at 11:00AM CST without any delays. 
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/16859646/127894898-bf98628c-f531-4102-a621-b3678c61fbc3.png">
 
-Now I'll pull historical (07/20/2021 to 07/25/2021) data into summary index. 
+So far vendor_summary_index is carrying 07/26/2021 data.
+<img width="1273" alt="image" src="https://user-images.githubusercontent.com/16859646/127894535-39130d22-ab1b-4c6d-b57d-dd7bd132b761.png">
+
+Now I'll pull historical (07/20/2021 to 07/25/2021) data into vendor_summary_index. 
 
 
 
