@@ -78,6 +78,8 @@ Yay!!! summary index report is working fine and selected data pushed to vendor_s
 So far vendor_summary_index is carrying 07/26/2021 data.
 <img width="1273" alt="image" src="https://user-images.githubusercontent.com/16859646/127894535-39130d22-ab1b-4c6d-b57d-dd7bd132b761.png">
 
+As I mentioned earlier, now I made changes on summery_index fileds. I added a new filed summer_field. Tomorrow this new field would add in 07/27/2021 data.
+
 Now I'll pull historical (07/20/2021 to 07/25/2021) data into vendor_summary_index. 
 
 
