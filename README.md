@@ -72,6 +72,10 @@ I am not adding fields now. Tomorrow after data pushed to summary_index I'll add
 
 And also, I've noticed that the report job is not creating at exactly 11:00AM CST. So I made changes on the report schedule. I removed scheduled window as 'No window'. Hopefully this will help to create/run the job at 11:00AM CST.
 
+Yay!!! summary index report is working fine and selected data pushed to vendor_summary_index and the job ran at 11:00AM CST without any delays. So far vendor_summary_index is carrying 07/26/2021 data.
+
+Now I'll pull historical (07/20/2021 to 07/25/2021) data into summary index. 
+
 
 
 
