@@ -82,6 +82,17 @@ As I mentioned earlier, now I made changes on summery_index fileds. I added a ne
 
 Now I'll pull historical (07/20/2021 to 07/25/2021) data into vendor_summary_index. 
 
+I pushed historical data using below command
+
+./Splunk cmd python fill_summary_index.py -app search -name populate_vendor_summary -et -7d@d -lt -1d@d -j 8 -owner cber1277 -auth cber1277:******* -dedup true
+
+Above command pushed 07/20/2021 to 07/25/2021 data into vendor_summary_index. 
+
+<img width="1271" alt="image" src="https://user-images.githubusercontent.com/16859646/128073791-9c00a46d-f65d-4db5-9205-d03ae3d264be.png">
+
+Since I added new field to this index as summary_field="vendor_summary", it's populating in the events as below.
+![image](https://user-images.githubusercontent.com/16859646/128074114-e62f4216-e891-4c93-91a8-2a8e2a196e20.png)
+
 
 
 
