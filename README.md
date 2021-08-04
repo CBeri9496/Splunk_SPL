@@ -94,8 +94,22 @@ Since I added new field to this index as summary_field="vendor_summary", it's po
 ![image](https://user-images.githubusercontent.com/16859646/128074114-e62f4216-e891-4c93-91a8-2a8e2a196e20.png)
 
 
+****Cascading Dropdowns****
 
+In this session I developed cascading dropdowns. These dropdowns are drive force to the dashboards. 
 
+Here I developed three dropdowns
+1. Time
+2. VendorID
+3. Code
+
+As you can see below XML code image, VendorId selection happens based on Time input and Code input is dependent on Time and VendorID
+
+<img width="1278" alt="image" src="https://user-images.githubusercontent.com/16859646/128237136-944bde2e-1c69-413b-8f47-2eaff54c0804.png">
+
+I developed two dashboards
+1. Vendor_Count
+2. Vendor Traffic by Code
 
 
 
