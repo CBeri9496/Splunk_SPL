@@ -111,6 +111,15 @@ I developed two dashboards
 1. Vendor_Count
 2. Vendor Traffic by Code
 
+Vendor_Count dashboard runs based on Time and VebdorID input selections. 
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/16859646/128254149-f0999937-50f0-47ff-ad54-64b8b10031ae.png">
+
+Vendor Traffic by Code runs based on above three inputs.
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/16859646/128254291-cef4942a-0373-4328-a818-6a7c812be9e3.png">
+
+
 
 
 
